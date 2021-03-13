@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        ">
+
+
+    <!-- To enable Spring Annotation -->
+    <context:component-scan base-package="academy.test"/>
+
+    <!--
+    Not needed if using component scan Since it will be scanned
+    <bean id="numberGenerator" class="academy.test.NumberGeneratorImpl"/>
+    <bean id="gameGenerator" class="academy.test.GameImpl" >
+
+         This is for constructor based dependency Injection, Spring advocates this type of injection, max 3 -->
+         <!-- <constructor-arg ref="numberGenerator"/>
+
+         This is for setter based dependency injection
+        <property name="numberGenerator" ref="numberGenerator"/>
+         Name is the name of the property, ref is the bean id
+
+    </bean>
+     For pre/post destroy
+    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
+    -->
+
+</beans>
